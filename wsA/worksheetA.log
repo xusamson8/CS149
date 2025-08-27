@@ -1,0 +1,46 @@
+ 1001  pwd
+ 1002  cd ~
+ 1003  ls -latr ; mkdir cs149 ; cd cs149
+ 1004  date
+ 1005  pwd
+ 1006  ls -latr  ; mkdir wsA  ; cd wsA
+ 1007  ls -latr
+ 1008  echo $? 
+ 1009  man ps
+ 1010  ps aux
+ 1011  top
+ 1012  wget https://github.com/torvalds/linux/archive/master.zip 
+ 1013  unzip master.zip
+ 1014  pwd
+ 1015  alias l='ls -latr' 
+ 1016  l
+ 1017  find . -name mem.c
+ 1018  find . -name mem.c | xargs head 
+ 1019  find . -name mem.c | xargs grep 86 
+ 1020  cd ..
+ 1021  pwd
+ 1022  pstree
+ 1023  pstree
+ 1024  ps tree
+ 1025  ps -a -f -x
+ 1026  ps -a -f -x | more
+ 1027  top
+ 1028  man kill
+ 1029  echo $?
+ 1030  echo $$
+ 1031  cd ~/Desktop/
+ 1032  cd cs149
+ 1033  cd .. 
+ 1034  cd cs149
+ 1035  cd wsA
+ 1036  ls | wc 
+ 1037  ls | sort
+ 1038  ls | sort | wc 
+ 1039  ls -latr /bin/  > a.out
+ 1040  cat a.out | more 
+ 1041  strace ls
+ 1042  sudo dtruss -t open_nocancel -p $SOMEPID
+ 1043  history > worksheetA.log
+ 1044  head worksheetA.log
+ 1045  tail worksheetA.log 
+ 1046  cat worksheetA.log
