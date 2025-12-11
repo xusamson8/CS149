@@ -1,5 +1,0 @@
-# Ignore zip files
-*.zip
-
-# Ignore master.zip specifically
-master.zip

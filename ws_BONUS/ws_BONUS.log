@@ -1,0 +1,38 @@
+pwd
+cd ~
+cd Desktop/
+ls -latr ; mkdir cs149 ; cd cs149
+git init
+git remote add origin https://github.com/xusamson8/cs149.git
+mkdir ws_BONUS
+cd ws_BONUS
+git add .
+curl -L -o out.pdf https://tinyurl.com/yy94jltt
+ls -latr
+
+# Clone xv6-labs-2023
+cd ~
+git clone git://g.csail.mit.edu/xv6-labs-2023
+cd xv6-labs-2023
+
+# Install RISC-V toolchain and QEMU (macOS)
+brew install riscv64-elf-gcc qemu
+
+# Create sleep.c in user/sleep.c
+
+# Build xv6
+make clean
+make
+make fs.img
+
+# Test sleep program
+./grade-lab-util sleep
+
+# Copy sleep.c to WS_bonus
+cp ~/xv6-labs-2023/user/sleep.c ~/Desktop/cs149/ws_BONUS/
+
+# Git commands to push
+cd ~/Desktop/cs149
+git add ws_BONUS/sleep.c WS_bonus/out.pdf ws_BONUS/ws_BONUS.log
+git commit -m "Worksheet BONUS - xv6 sleep implementation"
+git push -u origin main
